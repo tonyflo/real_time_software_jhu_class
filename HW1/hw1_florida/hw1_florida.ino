@@ -3,7 +3,7 @@
 
 //JHU RTSW HW 1 - Calibrated Temperature
 //Tony Florida
-//2014-09-16
+//2014-09-17
 //References: http://www.hobbytronics.co.uk/ds18b20-arduino
 
 // Data wire is plugged into pin 2 on the Arduino
@@ -22,7 +22,7 @@ void setup(void)
   Serial.begin(9600);
   Serial.println("JHU RTSW HW1");
   Serial.println("Tony Florida");
-  Serial.println("2014-09-16");
+  Serial.println("2014-09-17");
 
   // Start up the library
   sensors.begin();
@@ -48,6 +48,12 @@ boolean stabilized()
   }
   temp_stabilized = true;
   return true;
+}
+
+//convert celsius to fahrenheit
+double convert2fahrenheit(double celsius)
+{
+  return (celsius * 1.8) + 32; 
 }
 
 //main round robin loop
@@ -80,7 +86,7 @@ void loop(void)
   {
     Serial.print("Temperature is: ");
     // 0 refers to the first IC on the wire
-    Serial.println(temp);
+    Serial.println(convert2fahrenheit(temp));
     
     delay(10000); //delay 10 seconds
   }

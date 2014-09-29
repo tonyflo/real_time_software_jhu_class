@@ -73,26 +73,26 @@ void loop()
       *  0 and 180 to the motor. 
       */
       if (val > -1 && val < 181)
-     {
+      {
        // Print confirmation that the
        // value is between 0 and 180
        Serial.println("Value is between 0 and 180");
        // Write to Servo
        myMotor.write(val);
-     }
-     // The value is not between 0 and 180.
-     // We do not want write this value to
-     // the motor.
-     else
-     {
+      }
+      // The value is not between 0 and 180.
+      // We do not want write this value to
+      // the motor.
+      else
+      {
        Serial.println("Value is NOT between 0 and 180");
       
        // IT'S a TRAP!
        Serial.println("Error with the input");
-     }
+      } //0 to 180
     
       // Reset the value of the incomingString
       incomingString = "";
-    }
+    } //ch not 10
   }
 }

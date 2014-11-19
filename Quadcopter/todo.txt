@@ -1,0 +1,6 @@
+2014-11-16:
+- Attach 4 motors to frame with glue
+- Calibrate
+- Test 4 motors with battery, camera, wifi NOT plugged into PC
+- Transfer data from BBB to Arduino (ask Brian, Dave)
+- PID

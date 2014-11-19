@@ -1,0 +1,1 @@
+./bbb2arduino -p /dev/ttyACM0 -S 1,2,3
